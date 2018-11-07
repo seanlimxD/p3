@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+    <h1> Formal Diagnosis Machine </h1>  
+
     <form method='GET' action='/diagnosis-process'>
 
         <label for='age'>Please enter your age in years</label>
