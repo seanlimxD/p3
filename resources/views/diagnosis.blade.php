@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang='en'>
-<head>
-    <title>Formal Diagnosis Machine</title>
-</head>
-<body>
-    <h1> Formal Diagnosis Machine </h1>
+@extends('layouts.master')
+
+@section('title')
+    Formal Diagnosis Machine
+@endsection
+
+@section('content')
     <form method='GET' action='/diagnosis-process'>
 
         <label for='age'>Please enter your age in years</label>
@@ -49,7 +49,7 @@
     @if(count($errors) > 0)
     <ul>
         @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
+            <li class='error'>{{ $error }}</li>
         @endforeach
     </ul>
     @endif
@@ -59,5 +59,4 @@
         You are {{$diagnosisResults}}.
     </p>
     @endif
-</body>
-</html>
+@endsection
