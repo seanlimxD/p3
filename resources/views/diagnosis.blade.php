@@ -15,9 +15,9 @@
         <label for='day'>What is your body made out of?</label>
         <select name='body' id='day'>
             <option value=' '>Choose one...</option>
-            <option value='steel'>Steel</option>
-            <option value='flesh'>Flesh</option>
-            <option value='noclue'>I don't know</option>
+            <option value='steel' {{ (old('body')=='steel') ? 'selected' : '' }}>Steel</option>
+            <option value='flesh' {{ (old('body')=='flesh') ? 'selected' : '' }}>Flesh</option>
+            <option value='noclue' {{ (old('body')=='noclue') ? 'selected' : '' }}>I don't know</option>
         </select>
 
         <!-- Trick to makes it so that if no checkboxes are selected, we still receive form data -->
@@ -29,17 +29,20 @@
                 <li>
                     <label><input type='checkbox'
                                   name='spirit[]'
-                                  value='heart'> A pulse</label>
+                                  value='heart'
+                                  @if (old('spirit')) {{ (in_array('heart', old('spirit'))) ? 'checked' : '' }} @endif> A pulse</label>
                 </li>
                 <li>
                     <label><input type='checkbox'
                                   name='spirit[]'
-                                  value='soul'> Emotions</label>
+                                  value='soul'
+                                  @if (old('spirit')) {{ (in_array('soul', old('spirit'))) ? 'checked' : '' }} @endif> Emotions</label>
                 </li>
                 <li>
                     <label><input type='checkbox'
                                   name='spirit[]'
-                                  value='brain'> Complex thought</label>
+                                  value='brain'
+                                  @if (old('spirit')) {{ (in_array('brain', old('spirit'))) ? 'checked' : '' }} @endif> Complex thought</label>
                 </li>
             </ul>
         </fieldset>
