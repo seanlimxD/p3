@@ -8,8 +8,11 @@
 Address as many of the following points as applicable:
 
 + What are your initial impressions of the site interface?
-..+Simple and easy to understand.
+
+Simple and easy to understand.
+
 + Were there any parts of the interface that you found confusing, or did not work as you expected?
+
 The header for the radio-box selection wasn't spaced very well, floating above the actual section. There is also no way to return to the form after submission besides the native back function on the user's browser.
 + Were there any parts of the interface that you thought worked notably well?
 The interface was overall very easy to understand.
